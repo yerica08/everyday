@@ -1,0 +1,128 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+header {
+  width: 100%;
+  height: 50px;
+}
+
+main {
+  width: 700px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* 헤더 */
+nav {
+  width: 300px;
+  height: 100%;
+  float: right;
+}
+nav ul {
+  width: 100%;
+  height: 100%;
+}
+header li {
+  line-height: 50px;
+  text-align: center;
+  padding: 0 13px;
+  float: left;
+}
+.nav_icon {
+  width: 50px;
+  height: 50px;
+  padding: 13px;
+  box-sizing: border-box;
+}
+header ul img,
+.nav_icon a {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+header li:last-child {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+}
+header li:last-child img {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+ul:hover li:not(:hover) a {
+  opacity: 30%;
+}
+/* 로고 */
+h1 {
+  width: 300px;
+  overflow: hidden;
+  margin: 108px 0 38px 0;
+}
+h1 img {
+  width: 300px;
+}
+
+/* 섹션1 검색창 */
+.sec01 {
+  width: 700px;
+  height: 50px;
+  padding: 13px;
+  background-color: #fff;
+  box-shadow: 0px 0px 9px 3px rgb(215, 215, 215);
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+.search {
+  display: table;
+  display: flex;
+  gap: 20px;
+}
+.search img {
+  width: 24px;
+  height: 24px;
+  display: table-cell;
+}
+.search img:first-of-type {
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  padding-left: 10px;
+}
+
+.search input[type="text"] {
+  display: table-cell;
+  width: 100%;
+  font-size: 16px;
+  line-height: 25px;
+  border: transparent;
+  outline: none;
+}
+
+/* 섹션2 */
+.sec02 {
+  width: 478px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 40px;
+}
+.sec02_icon {
+  width: 112px;
+  height: 112px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.icon {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(175, 175, 175);
+  border-radius: 25px;
+}
