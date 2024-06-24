@@ -1,0 +1,79 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Jersey+10&family=Lobster&family=Micro+5+Charted&family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sevillana&display=swap');
+@font-face {
+    font-family: 'Freesentation-9Black';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');}
+
+
+body{
+    /* 글꼴 : '메인폰트', '서브폰트(메인폰트 미지원시 나오는 폰트), 폰트형식; */
+    font-family: "Open Sans", "Noto Sans KR", sans-serif;
+}
+h2{
+    /* 
+    text-align(글자정렬) : 값;
+    - left : 기본값으로 글자를 왼쪽으로 정렬한다.
+    - right : 글자를 영역의 오른쪽으로 정렬한다.
+    - center : 글자를 영역의 가운데로 정렬한다.
+    - justify : 글자 간격을 영역에 맞춰 늘린다.
+
+    txet-transform(문자변환) : 값;
+    - capitalize : 첫번째 글자를 대문자로 변환한다.
+    - uppercase : 모든 글자를 대문자로 변환한다.
+    - lowercase : 모든 글자를 소문자로 변환한다.
+    - none : 변환을 하지 않는 기본값.
+    - full-width : 가능한 한 모든 문자를 전각문자로 변환한다.
+    
+     * 전각문자? 가로 세로 길이 비율이 같은 글자.
+       반각문자? 가로 세로 길이 비율이 1:2인 글자.
+    */
+    font-family: "Micro 5 Charted", sans-serif;
+    font-size: 5vw;
+    color: rgb(136, 80, 34);
+    text-align: center;
+    text-transform: uppercase;
+}
+p{
+    /* 
+    letter-spacing : 자간
+    word-spacing : 띄어쓰기 간격
+    */
+    font-size: 2vw;
+    color: rgb(167, 167, 167);
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+span,a{
+    font-family: "Gugi", sans-serif;
+    font-size: 3vw;
+    color: rgb(57, 156, 180);
+    /* 
+    text-shadow(글자 그림자): 가로거리 세로거리 번짐정도 색상;
+    - 가로거리와 세로거리, 번짐정도는 px 단위를 주로 이용한다.
+    */
+    text-shadow: 3px 2px 2px hsl(29, 43%, 18%);
+}
+.sp_blue{
+    /* 
+    alpha는 투명도를 뜻한다.
+    0 ~ 1 사이의 값을 이용해 투명도를 표시할 수 있다.
+    0 : 투명도 100%
+    0.5 : 투명도 50% 
+    1 : 투명도 0%
+    */
+    color: rgb(0, 0, 255, 0.2);
+    font-weight: 600;
+}
+.a_pink{
+    color: palevioletred;
+    font-weight: 600;
+}
+li{
+    font-family: 'Freesentation-9Black';
+    font-weight: 100;
+    font-size: 50px;
+}
+.ntm{
+    font-family: 'Freesentation-9Black';
+    font-weight: 700;
+}
