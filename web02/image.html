@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지태그</title>
+</head>
+<body>
+    <!-- 
+    이미지태그
+    : 이미지를 불러오는 태그. inline-block 속성의 대표 태그.
+    여러개를 출력하면 이미지가 가로로 출력되고, 이미지 사이에 공백 1칸이 생긴다.
+    이미 사각형의 형태를 가지고 있기 때문에 width와 height로 너비 높이도 조정할 수 있다. 
+    이때, 이미지 비율을 정비율로 조절하고 싶다면, width만 사용하는 것이 좋다. 
+     width와 height의 값은 숫자를 입력하면 되고, 픽셀 단위일 경우 단위는 생략하고 숫자만 입력한다. 
+    픽셀 이외의 단위를 입력하고자 하는 경우에는 단위까지 함께 작정해야 한다.
+
+    이미지를 불러 올 때에는 src 속성에 이미지 경로를 절대경로나 상대경로로 불러 올 수 있다.
+    alt 속성을 이용하여 간단한 이미지 설명을 넣어주어야 한다.(웹표준)
+    alt에 쓰여진 값은 화면낭독기를 통해 시각장애인에게 해당 이미지를 설명하기도 하고,
+    이미지 경로가 틀렸을 경우 해당 이미지가 어떤 이미지인지 파악하는 용도로 쓰인다. 
+    단독태그. 직관적이고 간단하게 이미지설명을 쓰는 것이 좋다.
+
+    <기본형>
+    <img src="이미지 경로" alt="이미지 설명" width="숫자" height="숫자" />
+     -->
+
+     <!-- 이미지 경로 올바른 경우 -->
+     <img src="./image/astronaut.jpg" alt="우주비행사" width="300" height="150">
+     <img src="./image/moon.jpg" alt="달">
+     <img src="./image/spacecraft.jpg" alt="우주비행선">
+
+     <!-- 이미지 경로가 틀린 경우 -->
+     <img src="/a_tag.html" alt="우주비행사">
+</body>
+</html>
