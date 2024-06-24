@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/display02.css">
+</head>
+<body>
+    <!-- 
+        요즘에 안쓰는 곳이 없다는
+        display: flex; ★★★★★★★★★★★★★★★★★★
+        : 부모박스(container)안의 자식박스(item)를 정렬하는 속성이다.
+        flex를 적용하는 순간부터 자식박스는 가로로 정렬된다.
+        이때 자식박스의 가로 넓이 총 합이 부모박스의 넓이를 넘게 되면 
+        자식박스의 사이즈가 자동으로 줄어들며 부모를 채운다.
+        container에 flex가 적용되면 해당 자식들을 다양하게 정렬하는 
+        하위 정렬 속성들을 함께 사용 할 수 있다.
+
+
+        ★★중요!! 
+        display:flex 속성은 부모박스에 적용해야 하며,
+        이에 따른 정렬 속성들도 부모박스에 적용해야 한다.
+
+        <하위 정렬 속성>
+        1. justify-content
+        : 부모박스 안의 자식박스들을 가로로 정렬할 때 사용하는 속성.
+
+        - justify-content: flex-start; 
+        : 기본값, 부모박스 안의 자식들을 왼쪽에서 오른쪽으로 정렬한다.
+        - justify-content: flex-end;  
+        : 부모박스 안의 자식들을 오른쪽에서 왼쪽으로 정렬한다.    
+        - justify-content: space-between;
+        : 부모박스 안의 자식들을 양쪽을 기준으로 같은 간격으로 정렬한다.
+        - justify-content: space-around;
+        : 자식박스 양 옆에 동일한 간격으로 정렬한다.
+        - justify-content: space-evenly;
+        : 부모 박스 안의 자식박스들을 고르게 동일한 간격으로 배치한다. 
+        - justify-content: center;
+        : 자식박스들을 가운데로 배치한다. - 자식들을 이동한 것이기 때문에 다른 것들은 마진0auto로 옮겨야 한다.
+     -->
+
+     <!-- 이번에 웹표준으로 새롭게 정의된 태그 section -->
+     <section class="container">
+        <div class="item1">box1</div>
+        <div class="item2">box2</div>
+        <div class="item3">box3</div>
+        <div class="item4">box4</div>
+        <div class="item5">box5</div>
+        <div class="item6">box6</div>
+        <div class="item7">box7</div>
+        <div class="item8">box8</div>
+        <div class="item9">box9</div>
+        <div class="item10">box10</div>
+     </section>
+
+</body>
+</html>

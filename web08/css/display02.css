@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+.container{
+    width: 1200px;
+    height: 700px;
+    background-color: #a56a6a;
+    border: 5px solid #000;
+    margin: 0 auto;
+    display: flex;
+    /* 하위 정렬 속성 */
+    justify-content: flex-start;
+    justify-content: end;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: center;
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 24px;
+}
+
+.item1{
+    background-color: #ff788e;
+}
+
+.item2{
+    background-color: #ff8aeb;
+}
+
+.item3{
+    background-color: #9376fc;
+}
+
+.item4{
+    background-color: #80c2ff;
+}
+
+.item5{
+    background-color: #7dffd4;
+}
+
+.item6{
+    background-color: #68fd6f;
+}
+
+.item7{
+    background-color: #b2ff86;
+}
+
+.item8{
+    background-color: #fdff7d;
+}
+
+.item9{
+    background-color: #ffcf8f;
+}
+
+.item10{
+    background-color: #ff9191;
+}
+

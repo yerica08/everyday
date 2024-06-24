@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/display01.css">
+</head>
+<body>
+    <!-- 
+        박스를 배치 하거나 고유의 속성을 바꾸는 display
+        : display는 '보여주다'라는 의미로, 블록 요소와 인라인 요소의 특징을 바꿀 때 사용한다.
+
+        - display: block; 
+            : 해당 요소를 block속성으로 바꾸거나, display none 으로 숨긴 요소를 다시 나타낸다.
+        - display: inline; 해당 요소를 inline속성으로 바꾼다.
+        - display: inline-block; 해당 요소를 inline-block으로 바꾼다.
+        - display: none; 해당 요소와 영역을 모두 표현하지 않는다.(숨긴다)
+
+        
+        화면 크기가 pc에서 모바일로 줄어들면서 메뉴같은것을 숨기거나, 반응형에서 사진이 바뀌는 장면들을 보여줄때 none을 많이 쓴다.
+
+        영역은 남겨둔채 요소를 숨길 수 있는 visibility
+        : display:none을 사용하면 해당 요소가 차지하고 있던 공간과 요소가 모두 숨겨진다.
+        영역을 남겨주고 싶을 때는, visibility를 사용하면 된다.
+
+        - visibility: hidden; 요소가 차지하고 있던 영역은 유지하고 요소만 숨긴다.
+        - visibility: visible; 기본값, 영역과 요소를 그대로 보여준다.
+
+     -->
+
+     <!-- inline -> block -->
+     <span>span-inline</span>
+     <span>span-inline</span>
+     <span>span-inline</span>
+     <span>span-inline</span>
+
+     <!-- blcok -> inline -->
+     <div>div-block</div>
+     <div>div-block</div>
+     <div>div-block</div>
+     <div>div-block</div>
+
+     <!-- block -> inline-block -->
+     <ul>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+     </ul>
+
+     <!-- display:none -->
+     <!-- p태그 안에 제목태그가 들어갈 수 없음. 오류는 안나지만 웹표준. -->
+     <div class="con">
+        <h2 class="title1">제목1</h2>
+        <h2 class="title2">제목2</h2>
+        <h2 class="title3">제목3</h2>
+     </div>
+     
+</body>
+</html>

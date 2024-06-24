@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+span{
+    background-color: rgb(27, 161, 161, 0.5);
+    /* 인라인 속성은 넓이, 높이를 가질 수 없다. */
+    width: 200px;
+    height: 100px;
+    /* blcok 속성을 가지자 넓이, 높이가 생겼다. */
+    display: block;
+}
+
+div{
+    background-color: rgba(255, 230, 5, 0.5);
+    display: inline;
+}
+
+/* ul에게도 background-color를 주면 그 자식들도 모두 색상을 가지기 때문에 색상을 구별하기 어려움 */
+/* inline-block으로 바꿔서 쓰는 사람들이 많지만, inline-block은 사이에 공백을 가지기 때문에 안쓰기도한다. */
+li{
+    background-color: rgba(111, 153, 38, 0.6);
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+}
+
+h2{
+    width: 100px;
+    height: 50px;
+    background-color: #e48c8c;
+    margin-bottom: 20px;
+}
+
+.title1{
+    visibility: hidden;
+}
+
+.title2{
+    display: none;
+}
+
+.con{
+    /* 현재 div에 inline 으로 속성이 적용되어 있어서 바꿈 */
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+
+/* con에 마우스를 올리면(:hover) .title2가 block으로 나타난다.*/
+.con:hover .title2{display: block;}
+/* con에 마우스를 올리면(:hover) .title1이 bisible으로 나타난다.*/
+.con:hover .title1{visibility: visible;}
+
