@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css -->
+     <style>
+        /* input 태그의 type 속성값이 checkbox인 요소를 선택하여, 
+        체크박스가 check되었을때 바로 뒤에 위치하는 div 태그를 숨기고
+        체크해제되면 다시 보임 */
+        div{
+            background-color: pink;
+            padding: 20px;
+            width: 650px;
+            height: 200px;
+            box-sizing: border-box;
+        }
+        input[type='checkbox']:checked + div{
+            display: none;
+        }
+
+        /* overflow로 숨기는 다른 방법 */
+        /* 
+        div{
+            background-color: pink;
+            padding: 20px;
+            width: 650px;
+            height: 200px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        input[type='checkbox']:checked + div {
+            height: 0;
+        }
+        */
+        
+     </style>
+</head>
+<body>
+    <input type="checkbox">
+    <div>
+        <h3>제목</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus exercitationem explicabo consequuntur dignissimos. 
+        Laborum recusandae quam enim deserunt quo eligendi vitae asperiores qui ipsum iste, odio repellat dolores sit eveniet.</p>
+    </div>
+</body>
+</html>

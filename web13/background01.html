@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경속성</title>
+    <!-- css -->
+    <style>
+        *{margin: 0; padding: 0; }
+
+        .B1{
+            margin: 10px;
+            width: 200px;
+            height: 500px;
+            background-color: burlywood;
+            /* 배경이미지 */
+            /* 여러개를 불러올때는 ,(컴마)로 구분해서 불러오면 되고 앞(좌측)에 있는 이미지가 가장 앞으로 나온다. */
+            background-image: url(./img/heart.png), url(./img/tree.jpg);
+            /* %는 영역의 가로 사이즈가 기준이다. */
+            background-size: 20%;
+            background-repeat: no-repeat;
+            /* 포지션을 하나만 적으면 가로만 적용된다. */
+            background-position: 100px;
+            
+        }
+        .B2{
+            margin: 10px;
+            width: 50vw;
+            height: 500px;
+            background-color: skyblue;
+            /* 한번에 불러오려면 background로 선언해야함. */
+            background: url(./img/tree.jpg) no-repeat;
+            /* 영역의 가로를 기준으로 이미지를 정비율로 100% 채움 */
+            background-size: 100%;
+            background-size: cover;
+            background-position: left bottom;
+        }
+        /* 스크롤을 만들기 위해 높이를 인위적으로 지정 */
+        body{
+            height: 2000px;
+        }
+        .B3{
+            margin: 10px;
+            width: 100%;
+            height: 200px;
+            background-color: pink;
+            background-image: url(./img/tree.jpg);
+            background-size: 100%;
+            background-position: center center;
+            background-attachment: fixed;
+            color: #fff;
+            text-align: center;
+            padding: 60px 40px;
+            box-sizing: border-box;
+        }
+        .B3>h2{
+            display: inline;
+            font-size: 30px;
+            margin-bottom: 10px;
+            background-color: rgb(0, 0, 0, 0.7);
+        }
+        .B3>h2::before{
+            content: '아';
+            font-size: 0px;
+        }
+        .B3>h2::after{
+            content: '아';
+            font-size: 0px;
+        }
+        .B3>p{
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+        배경 속성
+        : 웹 문서를 꾸미기 위해 이미지나 여러 속성들을 적용하는 속성.
+        
+        <기본형>
+        1. background-color
+        - 배경에 색상을 지정한다. (색상명, #hex, rgb, rgba... 등)
+        
+        2. background-image
+        - 배경에 이미지를 넣을 수 있다. url(이미지경로) 속성을 사용한다.
+
+        3. background-repeat
+        - 배경을 반복할 것인지 여부를 지정한다. 기본값=바둑판배열.
+            <속성값>
+            3-1. no-repeat - 반복하지 않는다. 불러온 이미지를 1번만 보여준다.
+            3-2. repeat-x - 배경 이미지를 가로로 반복한다.
+            3-3. repaet-y - 배경 이미지를 세로로 반복한다.
+        
+        4. background-attachment
+        - 배경을 스크롤에 따라 고정할지 같이 스크롤될지 정한다.
+            <속성값>
+            4-1. fixed - 스크롤에 영향받지않고 제자리에 고정된다.
+            4-2. scroll - 기본값. 스크롤일 움직이면 배경이 위로 올라간다.
+
+        5. background-position
+        - 배경의 위치를 지정한다. 가로 세로값을 지정해주어야 한다. ex) 선택자{background-position: 100px 50px;}
+            <속성값>
+            5-1. px - 좌표지정.
+            5-2. Left - 영역의 좌측으로 정렬된다.
+            5-3. Right - 영역의 우측으로 정렬된다.
+            5-4. center - 영역의 가로중앙이나 세로중앙으로 정렬된다.
+            5-5. top - 영역의 상단으로 정렬된다.
+            5-6. bottom - 영역의 아래로 정렬된다.
+
+        6. background-size
+        - 배경의 크기를 지정한다.
+            <속성값>
+            6-1. px, %... 등 - 사이즈 지정.
+            6-2. cover - 배경이미지를 가로 영역에 맞춰 채운다.
+            6-3. contain - 배경이미지를 세로 영역에 맞춰 채운다.
+
+        7. background
+        <기본값>
+        1. background: url(주소) 반복여부 가로위치 세로위치 사이즈      
+        2. background: url(주소) 반복여부 가로위치 세로위치 컬러/사이즈      
+
+    -->
+
+    <div class="B1"></div>
+    <div class="B2"></div>
+    <div class="B3">
+        <h2> lorem ipsum </h2>
+        <p>
+            dljkhqlukdhfqlkjsdfhlkjadf.qnd .d lqkdjfhqiusdhf .qn dkjf hqldjkfhaldfn.
+        </p>
+    </div>    
+</body>
+</html>

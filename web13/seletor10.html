@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소선택자</title>
+    <!-- css -->
+     <style>
+        p::before{
+            /* 따옴표든 쌍따옴표든 상관 없음 */
+            /* 가상요소는 드레그가 되지 않는다. */
+            /* content: '시작~~~';
+            color: red; */
+            /* content는 내용을 적는것, 비워두기도 하지만 권장되지는 않는다. */
+            content: "round";
+            display: block;
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+            border-radius: 100%;
+            /* 
+                글자를 없애는 방법
+                1. text-indent: -999px;
+                - 글자만 이동시키는 속성
+                2. font-size: 0;
+                3. color: transparent;
+            */
+        }
+        p::after{
+            /* content: "~~마지막";
+            color: blue; */
+            content: "line";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: red;
+            font-size: 0;
+        }
+        span::before{
+            content: "스판앞";
+            color: aquamarine;
+            background-color: brown;
+        }
+        span::after{
+            content: "스판뒷";
+            color: brown;
+            background-color: aqua;
+        }
+     </style>
+</head>
+<body>
+    <!-- 
+        가상 요소 선택자                    
+        : 선택한 태그에 앞이나 뒤에 가상요소를 만드는 선택자이다.
+        html 코드에는 존재하지 않지만 html 구조에 가상 요소를 만들어서 스타일을 부여하는 역할.
+        마치 html 코드가 있는 것처럼 스타일링할 때 사용함.
+        가상 요소 선택자로 만들어진 요소는 기본적으로 inline 속성을 가진다.
+        가상 요소를 만들 때 content 속성을 이용한다.
+
+        <기본형>
+        1. 선택자::before
+        - 특정 요소의 앞에 content 속성 가상 요소를 만든다.
+        2. 선택자::after
+        - 특정 요소의 뒤에 content 속성으로 가상요소를 만든다.
+    -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Quo perspiciatis officia nemo reprehenderit consequatur! 
+            <span>nulla ut architecto ducimus consequuntur</span> 
+             aliquam doloribus dignissimos quos ratione impedit, 
+            voluptate voluptatem repellat tenetur!</p>
+</body>
+</html>
