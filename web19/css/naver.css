@@ -1,0 +1,377 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+}
+
+button {
+  width: fit-content;
+  height: fit-content;
+  border: 0;
+  background-color: transparent;
+}
+
+/* 스프레드 이미지 */
+.icon,
+.arrow_bt,
+.arrow_right {
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/icon.png);
+  background-size: 372px 326px;
+  background-repeat: no-repeat;
+  display: table-cell;
+}
+
+/* 메인 */
+main {
+  width: 500px;
+  height: 800px;
+  margin: 0 auto;
+}
+
+/* 로고 */
+h1 {
+  width: 500px;
+  height: 50px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+h1 > a {
+  width: fit-content;
+  height: fit-content;
+}
+h1 img {
+  width: 94px;
+  height: 18px;
+}
+
+/* 컨텐츠 박스 */
+.con_main,
+.real_name {
+  width: 500px;
+  height: auto;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* 우측 상단 설명 */
+.real_name {
+  padding: 10px 0;
+  position: relative;
+}
+.real_name > label {
+  color: #929294;
+  text-align: right;
+  font-size: 13px;
+  line-height: 18px;
+  padding-right: 23px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.real_name label::after {
+  width: 20px;
+  height: 20px;
+  content: "";
+  background-image: url(/web19/img/icon.png);
+  background-size: 372px 326px;
+  background-position: -342px -248px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* 회원가입 전체 틀 */
+.id_pw_email,
+.name_birth_tel,
+.accept {
+  width: 500px;
+  height: fit-content;
+  border: 1px solid rgb(146, 146, 148);
+  background-color: #fff;
+  border-radius: 6px 6px 6px 6px;
+  margin: 10px 0;
+}
+.id_pw_email > div,
+.name_birth_tel > div,
+.accept > div {
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  display: table;
+  padding: 10px;
+  position: relative;
+  table-layout: fixed;
+}
+.user_id,
+.user_pw,
+.name,
+.birth,
+.main_tel,
+.select {
+  border-bottom: 1px solid rgb(146, 146, 148);
+}
+input[type="text"] {
+  width: 100%;
+  height: 30px;
+  color: #929294;
+  outline: none;
+  border: none;
+  display: table-cell;
+  padding: 0;
+  padding-left: 10px;
+  background-color: transparent;
+}
+input[type="password"] {
+  width: 100%;
+  height: 30px;
+  color: #929294;
+  outline: none;
+  border: none;
+  display: table-cell;
+  padding: 0;
+  padding-left: 10px;
+  background-color: transparent;
+}
+
+/* 회원가입 전체틀 아이콘 위치 */
+.user_id .icon {
+  background-position: -342px -64px;
+}
+.user_pw .icon {
+  background-position: -310px 0;
+}
+.user_email .icon {
+  background-position: -96px -296px;
+}
+.name .icon {
+  background-position: -342px -64px;
+}
+.birth .icon {
+  background-position: -192px -296px;
+}
+.main_tel .icon {
+  background-position: -224px -296px;
+}
+.tel_number .icon {
+  background-position: -310px -128px;
+}
+
+/* 아래 방향 화살표 */
+.arrow_bt {
+  display: table-cell;
+  width: 16px;
+  height: 17px;
+  background-position: -96px -244px;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+}
+button[class="arrow_bt"]:active {
+  transform: rotate(180deg);
+}
+
+/* 회원가입1 */
+.id_pw_email p {
+  width: 90px;
+  height: 30px;
+  font-size: 15px;
+  color: #767678;
+  display: table-cell;
+}
+/* 회원가입2 통신사 선택박스 */
+.user_info select {
+  width: 90%;
+  height: 30px;
+  outline: none;
+  border: none;
+  font-size: 13px;
+  color: #767678;
+  display: table-cell;
+  padding-left: 10px;
+  -webkit-appearance: none; /* for chrome */
+}
+.user_info select option {
+  color: #000;
+}
+/* 회원가입2 성별, 외국인 선택박스 */
+.gender,
+.from,
+.gender li,
+.from li {
+  width: 100px;
+  height: 30px;
+  display: table-cell;
+  position: relative;
+  color: #929294;
+}
+.gender,
+.from {
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.select label {
+  font-size: 14px;
+}
+input[id="user_gender1"],
+input[id="user_from1"] {
+  appearance: none;
+  border: 1px solid rgb(182, 182, 182);
+  border-radius: 6px 0 0 6px;
+  width: 100px;
+  height: 30px;
+  margin: 0;
+  border-right: none;
+}
+input[id="user_gender2"],
+input[id="user_from2"] {
+  appearance: none;
+  border: 1px solid rgb(182, 182, 182);
+  border-radius: 0 6px 6px 0;
+  width: 100px;
+  height: 30px;
+  margin: 0;
+}
+input[type="radio"]:checked {
+  border: 1px solid #09aa5c;
+  width: 100px;
+  height: 30px;
+  box-sizing: border-box;
+  margin: 0;
+}
+input[type="radio"]:checked + label {
+  color: #09aa5c;
+}
+.gender li:first-child label,
+.from li:first-child label {
+  width: 100px;
+  padding: 7px 0;
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.gender li:last-child label,
+.from li:last-child label {
+  width: 100px;
+  padding: 7px 0;
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.gender li:first-child input,
+.from li:first-child input {
+  display: block;
+  position: relative;
+}
+.gender li:last-child input,
+.from li:last-child input {
+  display: block;
+  position: relative;
+}
+
+/* 회원가입3 */
+.accept {
+  position: relative;
+}
+.accept01 > span {
+  width: 65px;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+  color: #09aa5c;
+  padding-left: 25px;
+  box-sizing: border-box;
+  line-height: 30px;
+}
+.accept01 > strong {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+}
+.accept01::before {
+  width: 20px;
+  height: 20px;
+  content: "";
+  background-image: url(/web19/img/icon.png);
+  background-size: 372px 326px;
+  background-position: -342px -248px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+}
+
+/* 회원가입3 인증약관 */
+.accept02 {
+  width: 500px;
+  height: fit-content;
+  background-color: #fff;
+  padding: 14px;
+  box-sizing: border-box;
+  border-radius: 0 0 6px 6px;
+  border-top: 1px solid #d7d7d7;
+  display: none;
+}
+.accept li {
+  width: 233px;
+  height: 20px;
+  display: inline-block;
+}
+.c_menu {
+  display: table;
+  color: #929294;
+  font-size: 14px;
+  width: 242px;
+  height: 20px;
+  line-height: 20px;
+  vertical-align: middle;
+}
+.c_menu label {
+  float: left;
+}
+.c_icon {
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/icon.png);
+  background-size: 372px 326px;
+  background-repeat: no-repeat;
+  background-position: -342px -292px;
+  display: table-cell;
+  padding: 0 3px;
+  float: left;
+}
+.arrow_right {
+  background-position: -272px -221px;
+  width: 17px;
+  height: 16px;
+  float: left;
+}
+.arrow_bt:active + ul {
+  display: block;
+}
+
+/* 확인버튼 */
+.cc_button {
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+}
+.c_button {
+  width: 500px;
+  height: 50px;
+  background-color: #09aa5c;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
