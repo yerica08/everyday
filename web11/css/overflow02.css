@@ -1,0 +1,80 @@
+@charset "utf-8";
+*{margin: 0;
+padding: 0;}
+/* 드래그하여 선택하는 모든 영역의 배경색과 글자 색을 바꿀 수 있다. */
+::selection{
+    background-color: #ff3fdf;
+    color: #35abfa;
+}
+
+.imgbox1{
+    width: 300px;
+    height: 300px;
+    border: 2px solid #000;
+    float: left;
+    box-sizing: border-box;
+    margin-left: 30px;
+    overflow: scroll;
+}
+.imgbox2{
+    width: 300px;
+    height: 300px;
+    border: 2px solid #000;
+    float: left;
+    box-sizing: border-box;
+    margin-left: 30px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+.imgbox3{
+    width: 300px;
+    height: 300px;
+    border: 2px solid #000;
+    float: left;
+    box-sizing: border-box;
+    margin-left: 30px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.imgbox3::-webkit-scrollbar{
+    width: 10px;
+    height: 20px;
+    background-color: #ff6e6e;
+}
+.imgbox3::-webkit-scrollbar-thumb{
+    width: 10px;
+    height: 20px;
+    background-color: #a2ff4b;
+}
+.imgbox3::-webkit-scrollbar-track{
+    width: 10px;
+    height: 20px;
+    background-color: #35abfa;
+}
+.imgbox3::-webkit-scrollbar-button{
+    width: 10px;
+    height: 20px;
+    background-color: #9757ff;
+}
+.imgbox3::-webkit-scrollbar-corner{
+    width: 10px;
+    height: 20px;
+    background-color: #fded5f;
+}
+
+/* 목록 스타일 속성 */
+/* li는 안써도 ul,ol한테 속성을 상속받는다. 
+그리고 현재 li한테 뭔가를 지정하면 ul?li? 누구한테 지정할지 헷갈릴 수 있다. */
+/* 전체선택자로 인해 숨은 불릿과 숫자 안쪽으로 들여쓰기 */
+ul,ol{
+    list-style-position: inside;
+    margin-bottom: 30px;
+}
+
+.a1{list-style-type: disc;}
+.a2{list-style-type: circle;}
+.a3{list-style-type: square;}
+.a4{list-style-type: none;}
+
+ol{list-style-type: upper-roman;}

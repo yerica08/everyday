@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow:scroll</title>
+    <!-- css -->
+     <link rel="stylesheet" href="./css/overflow02.css">
+</head>
+<body>
+    <!-- 
+    overflow: scroll;
+    : 영역에서 벗어나는 부분을 스크롤로 보여주는 속성.
+    기본값은 가로, 세로 스크롤이 모두 보이는 것이 기본값이다.
+    만약 특정 부분을 숨기고 싶다면 overflow-x/y: hidden; 을 사용한다.
+    그 외에 나타내야 하는 부분은 overflow-x/y: scroll로 나타낸다.
+
+    속성값
+    overflow-x: 가로 스크롤. hidden이나 scroll로 나타내고 숨길 수 있다.
+    overflow-y: 세로 스크롤. hidden이나 scroll로 나타내고 숨길 수 있다.
+    ------------------------------------
+    스크롤 스타일링 하기
+    : 스크롤에는 각 부분마다 이름이 지정되어 있다. 하지만 브라우저를 만드는 회사마다
+    지원하는 속성이 있고, 아닌 속성이 있어 해당 브라우저에 맞춰 브라우저 접두사를 붙여줘야한다.
+
+    스크롤 스타일링 속성
+    1. Scrollbar : 스크롤 영역 전체
+    2. Scrollbar-thumb : 드레그가 가능한 스크롤 핸드 막대
+    3. Scrollbar-track : 스크롤을 움직일 수 있는 전체 영역(=진행 표시줄)
+    4. Scrollbar-buttom : 스크롤의 가장 상단 또는 하단 또는 좌우에 위치한 화살표 버튼
+    5. Scrollbar-track-piece : 스크롤 진행 표시줄에서 스크롤 핸드막대를 제외한 나머지 공간
+    6. Scrollbar-corner : 수평/수직 스크롤 막대가 만나는 스크롤 막대의 하단 모서리
+    7. resizer : 요소 하단 모서리에 나타내는 크기 조정 핸들
+
+    브라우저 접두사
+    1. -webkit- : chrome 브라우저 지원
+    2. -moz- : firefox 브라우저 지원
+    3. -o- : opera 브라우저 지원
+    4. -IE- : 익스플로러 브라우저를 지원
+    -->
+    <div class="imgbox1">
+        <h4>scroll X,Y</h4>
+        <img src="./img/city.jpg" alt="도시">
+    </div>
+    <div class="imgbox2">
+        <h4>scroll X</h4>
+        <img src="./img/city.jpg" alt="도시">
+    </div>
+    <div class="imgbox3">
+        <h4>scroll Y</h4>
+        <img src="./img/city.jpg" alt="도시">
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam tempore officiis doloremque sapiente voluptatum soluta, non natus vel voluptatem ad aliquam facilis impedit debitis, similique ipsum? Deleniti ipsum voluptas ab?</p>
+</body>
+</html>

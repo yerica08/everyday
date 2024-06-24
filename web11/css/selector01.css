@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* 후손선택자 */
+
+/* html문서 내의 모든 div태그 안에 있는 p태그를 선택함  */
+div p{
+    color: darkgreen;
+}
+
+/* box1 안에 있는 p태그를 선택함 */
+.box1 p{
+    color: blue;
+}
+
+/* html문서 내의 모든 div태그 안에 있는 p태그 안의 span태그을 선택함 */
+div p span{
+    color: gold;
+}
+
+/* box1안에 있는 자식태그 p태그 안의 span태그를 선택함 */
+.box1 p span{
+    color: brown;
+}
+
+/* ul안에 클래스가 menu인 자식 안에 a태그를 선택
+1. ul 안에 자식은 4개
+2. a태그에는 네이버가 새창으로 열리는 링크가 존재
+3. ul 안에 자식 4개는 텍스트가 다음, 네이버, 구글, 카카오
+*/
+
+/* 네개 다 정답
+1. ul li a
+2. ul .menu a
+3. li a 
+4. .menu a
+*/
+.menu a{
+    color: coral;
+    text-decoration: none;
+}
