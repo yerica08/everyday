@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_test01</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- 
+        css 선택자의 우선순위
+        : css 선택자란? 태그를 선택해서 디자인을 적용한다고 해서 '선택자'라고 부른다.
+        css 선택자의 종류로는 'id선택자(#)', 'class선택자(.)', '태그명 선택자', '전체 선택자(*)' 등 으로 나누어진다.
+
+        (#)id > (.)class > tag > (*)전체 순으로 우선순위가 높다.
+
+        다양한 태그나 class나 id를 한꺼번에 불러와 스타일을 적용하고 싶다면 '그룹선택자(,)'를 사용한다.
+     -->
+    <h1 style="color: cadetblue;">안녕하세요</h1>
+    <h2 class="title">반갑습니다</h2>
+    <h2 class="title">반가워요</h2>
+    <h2 class="title" id="logo">반갑구만</h2>
+
+    <!-- 그룹선택자 -->
+    <p>하이</p>
+    <span>span</span>
+
+    <h3>color : 글자색상</h3>
+    <h4>font-family : 글꼴</h4>
+    <h5>font-size : 글자크기</h5>
+    <h6>font-style : 글자스타일(기울이기)</h6>
+</body>
+</html>
