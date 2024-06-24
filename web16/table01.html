@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>표태그</title>
+    <!-- css -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      table,
+      td,
+      th {
+        border: 3px solid skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 2행 3열 -->
+    <table>
+      <!-- 1행 -->
+      <tr>
+        <td>1행 1열</td>
+        <td>1행 2열</td>
+        <td>1행 3열</td>
+      </tr>
+      <!-- 2행 -->
+      <tr>
+        <td>2행 1열</td>
+        <td>2행 2열</td>
+        <td>2행 3열</td>
+      </tr>
+    </table>
+
+    <!-- 제목이 있는 표 -->
+    <!-- 3행 2열 -->
+    <table>
+      <tr>
+        <th>제목</th>
+        <th>제목</th>
+      </tr>
+      <tr>
+        <td>1행 1열</td>
+        <td>1행 2열</td>
+      </tr>
+      <tr>
+        <td>2행 1열</td>
+        <td>2행 3열</td>
+      </tr>
+    </table>
+
+    <!-- 
+        표에서 제목을 나타내는 태그
+        : 칸의 제목을 쓸 때에는 th 태그를 이용한다.
+        표 전체에 제목을 나타낼 때에는 <caption>이나 <figcaption>이라는 태그를 사용할 수 있다.(이미지에 제목을 나타낼 때도 쓴다.)
+
+        <caption> 태그는 <table> 열린 태그의 바로 아래에 쓴다.(위치 고정)
+        <figcaption> 태그는 <table> 열린 태그의 위나 닫힌 태그의 아래에 쓴다.
+            ㄴ 자동정렬이 없고, 좀 더 자유롭게 쓸 수 있다.
+    -->
+    <table>
+      <caption>
+        표의 제목
+      </caption>
+      <tr>
+        <td>내용1</td>
+        <td>내용2</td>
+      </tr>
+      <tr>
+        <td>내용1</td>
+        <td>내용2</td>
+      </tr>
+    </table>
+
+    <figcaption>표 위의 제목</figcaption>
+    <table>
+      <tr>
+        <td>내용1</td>
+        <td>내용2</td>
+      </tr>
+      <tr>
+        <td>내용1</td>
+        <td>내용2</td>
+      </tr>
+    </table>
+    <figcaption>표 아래의 제목</figcaption>
+  </body>
+</html>

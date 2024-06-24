@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>칸 합치기</title>
+    <!-- css -->
+    <style>
+      table,
+      th,
+      td {
+        border: 3px solid darkseagreen;
+        font-size: 12px;
+        text-align: center;
+        padding: 10px;
+      }
+
+      /* test style */
+      div {
+        width: fit-content;
+        height: fit-content;
+        margin: 10px;
+        padding: 10px;
+      }
+
+      div table {
+        border-collapse: collapse;
+        margin: 5px;
+      }
+
+      div table,
+      th,
+      td {
+        border: 1px solid #000;
+      }
+
+      div .figth {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      div .figsub01 {
+        font-size: 10px;
+        text-align: end;
+      }
+      div .figsub02 {
+        font-size: 10px;
+      }
+
+      div .lightgray {
+        background-color: #ebebeb;
+      }
+      div .Darkgray {
+        background-color: #bbbbbb;
+      }
+
+      div tr > td:first-of-type {
+        text-align: left;
+      }
+
+      div tr:last-of-type > td {
+        text-align: center;
+      }
+      /* 이거 왜안돼 */
+      div tr > td:nth-of-type(4) {
+        border-right: 1px dotted #000;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        colspan 속성
+        : colspan은 가로 칸을 합치주는 속성으로 td나 th 태그에 직접 적용한다.
+        정확히 말하면 합치는 것보단 늘리는 것에 가까운데, 적용한 해당 칸부터 쓰여진 숫자만큼 가로칸을 차지한다.
+    -->
+
+    <table>
+      <tr>
+        <td colspan="3">1행 1열</td>
+        <!-- 1행 1열이 3칸을 차지하기 때문에 2,3열을 지워준다. -->
+        <!-- 
+        <td>1행 2열</td>
+        <td>1행 3열</td> 
+        -->
+        <td>1행 4열</td>
+      </tr>
+      <tr>
+        <td>2행 1열</td>
+        <td>2행 2열</td>
+        <td>2행 3열</td>
+        <td>2행 4열</td>
+      </tr>
+      <tr>
+        <td>3행 1열</td>
+        <td>3행 2열</td>
+        <td colspan="2">3행 3열</td>
+        <!-- <td>3행 4열</td> -->
+      </tr>
+    </table>
+
+    <!-- 
+    기준이 되는 행과 열이 없을 경우 colspan과는 상관없이 가장 많이 쓰여진 갯수만큼 칸을 차지한다. 
+    아래 칸의 기준으로는 td의 쓰여진 갯수가 3이 가장 크기 때문에 colspan의 갯수까지 합치면 4임에도 3열의 표가 만들어진다. 
+    이로 인해 colspan이 가상의 칸을 만들어주지는 않는다는 것을 알 수 있다.
+    -->
+    <table>
+      <tr>
+        <td colspan="3">1행 1열</td>
+        <!-- 1행 1열이 3칸을 차지하기 때문에 2,3열을 지워준다. -->
+        <!-- 
+        <td>1행 2열</td>
+        <td>1행 3열</td> 
+        -->
+        <td>1행 4열</td>
+      </tr>
+      <tr>
+        <td>3행 1열</td>
+        <td>3행 2열</td>
+        <td colspan="2">3행 3열</td>
+        <!-- <td>3행 4열</td> -->
+      </tr>
+    </table>
+
+    <!-- 
+        rowspan 속성
+        : 세로로 칸을 합치는 속성이다. 정확히 말하면 합치는 것보단 늘리는 것에 가까운데,
+        rowspan이 쓰여진 해당 태그 칸부터 쓰여진 숫자만큼 세로칸을 차지한다.
+    -->
+    <table>
+      <tr>
+        <td rowspan="3">1행 1열</td>
+        <!-- rowspan 세로로 3칸을 차지하며 원래 칸들을 옆으로 밀기 때문에 1열들을 지워줘야한다. -->
+        <td>1행 2열</td>
+        <td>1행 3열</td>
+        <td>1행 4열</td>
+      </tr>
+      <tr>
+        <!-- <td>2행 1열</td> -->
+        <td>2행 2열</td>
+        <td rowspan="2">2행 3열</td>
+        <td>2행 4열</td>
+      </tr>
+      <tr>
+        <!-- <td>3행 1열</td> -->
+        <td>3행 2열</td>
+        <!-- <td>3행 3열</td> -->
+        <td>3행 4열</td>
+      </tr>
+    </table>
+
+    <!-- 
+        border-collapse
+        : 표의 줄을 하나로 합치는 속성(css 속성)
+        table 태그에 줘야한다.
+    -->
+
+    <!-- test -->
+    <div>
+      <figcaption class="figth">
+        [표1] LTE 통신사-단말기 브랜드별 통화품질 문제점수*
+      </figcaption>
+      <figcaption class="figsub01">단위: PPU-</figcaption>
+      <table>
+        <tr>
+          <th rowspan="2" class="Darkgray"><span></span></th>
+          <th rowspan="2" class="Darkgray">TOTAL<br />(산업평균)</th>
+          <th colspan="3" class="Darkgray">통신사</th>
+          <th colspan="4" class="Darkgray">단말기 브랜드</th>
+        </tr>
+        <tr class="lightgray">
+          <th>SKT</th>
+          <th>KT</th>
+          <th>LG U+</th>
+          <th>삼성<br />갤럭시</th>
+          <th>LG<br />옵티머스</th>
+          <th>펜택<br />베가</th>
+          <th>애플<br />아이폰</th>
+        </tr>
+        <tr>
+          <th>통화품질 문제점수</th>
+          <th>1.01</th>
+          <th>2.02</th>
+          <th>3.03</th>
+          <th>4.04</th>
+          <th>5.05</th>
+          <th>6.06</th>
+          <th>7.07</th>
+          <th>8.08</th>
+        </tr>
+        <tr>
+          <td>음석 송/수신 상태</td>
+          <td>1.01</td>
+          <td>2.02</td>
+          <td>3.03</td>
+          <td>4.04</td>
+          <td>5.05</td>
+          <td>6.06</td>
+          <td>7.07</td>
+          <td>8.08</td>
+        </tr>
+        <tr>
+          <td>음성 통화성능</td>
+          <td>1.01</td>
+          <td>2.02</td>
+          <td>3.03</td>
+          <td>4.04</td>
+          <td>5.05</td>
+          <td>6.06</td>
+          <td>7.07</td>
+          <td>8.08</td>
+        </tr>
+        <tr>
+          <td class="th">문자 송/수신</td>
+          <td>1.01</td>
+          <td>2.02</td>
+          <td>3.03</td>
+          <td>4.04</td>
+          <td>5.05</td>
+          <td>6.06</td>
+          <td>7.07</td>
+          <td>8.08</td>
+        </tr>
+        <tr>
+          <td>무선 인터넷</td>
+          <td>1.01</td>
+          <td>2.02</td>
+          <td>3.03</td>
+          <td>4.04</td>
+          <td>5.05</td>
+          <td>6.06</td>
+          <td>7.07</td>
+          <td>8.08</td>
+        </tr>
+        <tr>
+          <td>(사례수)</td>
+          <td>(0123)</td>
+          <td>(0234)</td>
+          <td>(0345)</td>
+          <td>(0456)</td>
+          <td>(0567)</td>
+          <td>(0678)</td>
+          <td>(0789)</td>
+          <td>(0890)</td>
+        </tr>
+      </table>
+      <figcaption class="figsub02">
+        * 최근 6개월 이내 LTE 스마트폰구입자 기준 통화품질 문제점 수. 적은것이
+        좋은 것임 <br />
+        **PPU는 Problem Per Unit의 약자로 *대 당 문제점 수를 뜻함
+      </figcaption>
+    </div>
+  </body>
+</html>
