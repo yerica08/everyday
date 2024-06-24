@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- css초기화 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
+      integrity="sha512-IJEbgDEF7OeKJRa0MY2PApnyJHRIsgzCveek4ec8VWQ+7KG3ZSKVNYa5xP/Gh0hVP0Mwb+gBsk+GwR3JQGhQNg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/semantic01.css" />
+  </head>
+  <body>
+    <!-- 
+        semantic tag(시멘틱태그)
+        : 웹표준 태그로 구조를 쉽게 파악하고 큰 영역들을 잡는 구조 태그.
+        검색 엔진 같은 프로그램에서 자료를 검색해 정보의 의미를 분석할 수 있게 도와주는 지능형 웹 태그.
+        또한, 시각장애인들을 위한 웹 표준 방식.
+
+        [시멘틱 태그의 종류]
+        1. <header> : 웹페이지 최상단에 위치하는 태그. 보통 로고와 메뉴, 검색창, 로그인영역 등이 들어간다.
+        2. <nav> : header에 들어가는 GNB영역(header 안에 들어가는 1차메뉴)과 같이 메뉴부분을 표현할 때 사용한다.
+                   웹페이지에 여러 개의 메뉴 영역이 들어갈 경우 #아이디 선택자로 구분한다.
+                   header뿐만 아니라 컨텐츠 영역 또는 Footer 부분에도 자유롭게 몇 개든 사용할 수 있다.
+        3. <section> : content 영역을 포함하는 태그. 해당 컨텐츠를 주제별로 묶을 때 사용한다.
+                       section 태그 내부에는 h1 부터 h6 까지의 제목 태그가 포함된다.
+                       section 안에는 또 다른 scection 태그를 넣을 수 있다.
+        4. <main> : section 영역들을 하나로 묶어주는 전체 영역을 말한다. 보통 header의 아래에 들어간다.
+        5. <article> : article의 사전적 의미는 신문이나 잡지의 '기사'를 의미한다.
+                       이 태그는 웹 상의 실제 내용을 작성하는 것이며, 
+                       블로그의 포스트나 웹사이트의 이벤트내용과 같이 독립적인 웹 컨텐츠를 말한다.
+                       article태그는 안에 section태그를 넣을 수 있고, seciton 또한 article태그를 포함 할 수 있다.
+        6. <aside> : 웹 문서에서 좌, 우, 하단에 들어가는 side bar 영역을 말한다.
+                     이 태그는 필수 요소는 아니며, 보통 광고나 링크 모음과 같이 
+                     문서의 메인 내용에 영향을 미치지 않는 내용을 넣을 때 사용한다.
+        7. <footer> : 웹 문서의 가장 하단에 위치하는 태그. 
+                      보통 저작권 표시나 본문 내용과는 상관 없지만 중요한 내용들이 들어간다.
+                      예를 들어 로그인이나 판매가 가능한 사이트는 이용약관, 개인정보 처리방침, 사업자 등록번호, 
+                      통신판매 신고업 번호, 고객센터, 청소년 보호정책 등의 내용이 들어간다.      
+     -->
+
+    <!-- 큰 틀부터 작은 틀로 순차적으로 만들어나간다. -->
+    <div class="container">
+      <!-- header -->
+      <header>
+        <div class="header_con">
+          <!-- gnb menu -->
+          <h1>Logo</h1>
+          <nav id="gnb">
+            <ul>
+              <li>
+                <a href="#">search</a>
+              </li>
+              <li>home</li>
+              <li>menu</li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- main content -->
+      <main>
+        <!-- content01 -->
+        <section>
+          <h2>Lorem ipsum</h2>
+          <div class="sec1_article">
+            <article>
+              <h2>main article-1</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ab
+                voluptas? Iure, consequatur doloribus mollitia natus incidunt id
+                omnis officiis error, ut reprehenderit aperiam voluptatem
+                temporibus voluptatum maiores, fugit modi?
+              </p>
+            </article>
+            <article>
+              <h2>main article-2</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ab
+                voluptas? Iure, consequatur doloribus mollitia natus incidunt id
+                omnis officiis error, ut reprehenderit aperiam voluptatem
+                temporibus voluptatum maiores, fugit modi?
+              </p>
+            </article>
+          </div>
+        </section>
+        <!-- content02 -->
+        <section>
+          <h2>과자</h2>
+          <!-- content02 image -->
+          <div class="sec2">
+            <img src="./img/1.png" alt="cookie" />
+            <!-- content02 content -->
+            <div>
+              <!-- top -->
+              <div>
+                <h3>
+                  사무실 회사 탕비실 간식 과자 세트 6-02<br />[원산지:상세설명에
+                  표시]
+                </h3>
+                <h3>60,000원</h3>
+              </div>
+              <!-- middle -->
+              <div class="point">
+                <div>노른자마트 고객을 위한 혜택</div>
+                <div>
+                  <div>
+                    <span>최대 적립 포인트</span>
+                    <span>1,350원</span>
+                  </div>
+                  <div>
+                    <span>ㄴ기본적립</span>
+                    <span>600원</span>
+                  </div>
+                </div>
+                <div>
+                  <img src="./img/3.png" alt="point" />
+                </div>
+              </div>
+              <!-- bottom -->
+              <div class="sec_con3">
+                <p>무이자할부 | 카드자세히보기</p>
+                <p>불호없는 인기 탕비실간식 20종 모음</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- footer -->
+      <footer>
+        <!-- ㅁ한자같은 기호코드로 저작권을 쓰면 유니코드에 의해서 해석이 안되어 깨질 때가 있다. 그렇기 때문에 앤터틱 코드를 쓴다. -->
+        <!-- &(앤드기호,앰퍼샌드)copy; -->
+        &copy; Copyright
+      </footer>
+    </div>
+  </body>
+</html>
