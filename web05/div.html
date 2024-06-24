@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공간을 나누는 div 태그</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- 
+        공간을 분할하는 <div> 태그
+        : div 태그는 웹페이지에서 레이아웃을 만들 때 주로 사용하는 태그이다.
+        block 속성의 대표적인 태그로 너비 높이를 지정하지 않으면 브라우저의 전체 너비를 차지한다.
+        block 속성의 넓이 높이와 여백을 주고싶을때에는 CSS BOX MODEL이라는 개념을 알고 있어야 한다.
+
+        CSS BOX MODEL
+        : block 속성을 가진 모든 태그들은 박스의 형태를 가지고 있다.
+        원하는 위치에 배치하기 위해 css를 이용한다.
+        css를 통해 가로, 세로의 크기를 정하고 여백과 배치 형태를 설정하여 원하는 형태를 만든다.
+        이러한 박스 형태를 가진 요소를 스타일 시트에서는 (css) ' css 박스 모델 ' 이라고 부른다.
+
+        박스 모델로 컨텐츠 영역을 만들 때에는 width 와 height를 이용해 넓이와 높이를 만들 수 있다.
+        컨텐츠 안의 여백을 설정할 때에는 padding을 사용한다.
+        컨텐츠와 컨텐츠 사이의 여백을 지정할 경우 margin을 이용해 컨텐츠를 떨어트릴수있다.
+        박스에 테두리를 지정하고 싶을 때에는 border라는 속성을 이용한다.
+        padding, border, margin 은 사방으로 적용할 수 있고, 원하는 위치만 따로 적용할 수도 있다.
+
+        구조 : margin U border U padding U width,height 
+
+        width와 height
+        width는 넓이 height 는 높이를 말한다.
+        이 속성들로 정해진 영역이 바로 실질적인 컨텐츠 영역이 된다.
+        단위는 px, %, vw / vh나 vmin / vmax를 쓰며 auto(자동)단위를 쓸 수 있다.
+        - css에선 글자만 들어있는 경우는 넓이를 0으로 인식하기 때문에 잘 지정해주는 것이 중요하다. 
+
+        -------------------------------------------------
+
+        padding, margin 을 테두리별 적용하는 방법
+
+        < 컨텐츠 영역 테두리에 각 다른 여백을 지정하고 싶을 경우 >
+        1. margin(padding)-top : 속성값; - 속성값만큼 상단에 적용
+        2. margin(padding)-bottom : 속성값; - 속성값만큼 하단에 적용
+        3. margin(padding)-left : 속성값; - 속성값만큼 좌측에 적용
+        4. margin(padding)-right : 속성값; - 속성값만큼 우측에 적용
+
+        < 여백을 속성값의 연속으로 지정하고 싶을 경우>
+        1. margin(padding) : 속성값1(상,하) 속성값2(좌,우);
+        2. margin(padding) : 속성값1(상) 속성값2(우) 속성값(하) 속성값4(좌); - 시계방향
+
+        속성값을 한번에 지정할 경우 공백으로 구별해주어야한다.
+     -->
+     <div class="box1">div1</div>
+     <div class="box2">div2</div>
+     <div class="box3">div3</div>
+</body>
+</html>
