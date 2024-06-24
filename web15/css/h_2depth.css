@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Noto+Sans+KR:wght@100..900&display=swap");
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* 헤더 */
+header {
+  width: 100%;
+  height: 84px;
+}
+
+.header_con {
+  position: relative;
+  width: 952px;
+  height: 84px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* 로고 */
+h1 {
+  font-size: 28px;
+  font-family: "Allerta Stencil", sans-serif;
+  font-weight: lighter;
+}
+
+/* 아이콘 */
+.icons {
+  width: fit-content;
+  height: 84px;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.icons > div {
+  width: 48px;
+  height: 48px;
+}
+
+.icons a > img {
+  width: 24px;
+  height: 24px;
+  padding: 12px;
+}
+
+/* 2차메뉴 */
+#gnb2 {
+  width: fit-content;
+  height: fit-content;
+  background-color: salmon;
+  position: relative;
+}
+#gnb2 > ul {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  gap: 40px;
+}
+
+/* 2차메뉴의 아이콘 */
+#gnb2 > ul > li:last-child > a {
+  display: flex;
+  justify-content: start;
+}
+
+#gnb2 img {
+  width: 12px;
+  height: 12px;
+  margin: 36px 0;
+}
+
+/* 2차메뉴 */
+#gnb2 > ul > li {
+  line-height: 84px;
+}
+
+#gnb2 .submenu {
+  width: 100%;
+  height: 0px;
+  background-color: skyblue;
+  position: relative;
+}
+
+.submenu {
+  visibility: hidden;
+}
+
+#gnb2 .submenu > li {
+  line-height: 40px;
+  text-align: center;
+}
+
+#gnb2 li:hover .submenu {
+  visibility: visible;
+}

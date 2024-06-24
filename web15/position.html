@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- css -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0%;
+      }
+      div {
+        width: 200px;
+        height: 200px;
+        box-sizing: border-box;
+        border: 5px solid salmon;
+        /* 상대좌표. 각 박스의 왼쪽 상단 모서리가 기준점. 좌표인식이 가능하다. */
+        position: relative;
+        margin: 20px;
+      }
+      .box1 {
+        top: 40px;
+        left: 50px;
+      }
+
+      .box2 {
+        /* position을 적용하지 않은 것과 같은 기본값으로 좌표인식을 못한다. */
+        position: static;
+        /* top, left 인식 불가 */
+        top: 400px;
+        left: 500px;
+      }
+      .top3 {
+        left: 50%;
+        top: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        position
+        : position은 위치를 설정할 때 사용하는 속성이다.
+        위치 속성에는 절대 좌표와 상대 좌표라는 개념이 있다.
+        절대 좌표는 0점을 기준으로 움직이는 좌표를 말하고,
+        상대 좌표는 태그가 출력된 위치를 기준으로 움직인다.
+
+        [속성값]
+        1. static : 태그가 출력된 기본값. position 속성을 적용하지 않은 것과 같다.
+                    block 속성의 경우, 태그가 위에서 아래로 출력된 기본 상태를 의미한다.
+        2. absolute : 절대좌표를 의미한다. 브라우저 혹은 부모박스를 기준으로 가장 왼쪽 상단 0점을 기준으로
+                      top, left, right, bottom 방향으로 이동할 수 있다.
+                      relative 가 적용되어 있는 부모박스 안의 자식박스에게 적용하는 속성.
+        3. relative : 상대좌표를 의미한다. block 속성의 태그가 출력된 현재 위치에서 left나 top으로 값을 줄 수 있다.
+                      absolute로 움직이려고 하는 자식박스의 부모박스에게 보통 적용한다.
+        4. fixed : 절대좌표를 의미한다. 브라우저 화면을 기준으로 top, left, right, bottom 방향으로 이동할 수 있다.
+
+        **position을 적용하면 위치를 옮기기 위해 반드시 좌표를 함께 입력해주어야 한다.
+        각각의 좌표는 아래와 같이 사용한다
+        1. Left : 브라우저 또는 부모박스를 기준으로 왼쪽에서 오른쪽으로 이동하는 값(양수)
+                  음수일 경우 기준점에서 왼쪽으로 이동한다.
+        2. right : 브라우저 또는 부모박스를 기준으로 오른쪽에서 왼쪽으로 이동하는 값(양수)
+                   음수일 경우 기준점에서 오른쪽으로 이동한다.
+        3. top : 브라우저 또는 부모박스를 기준으로 위에서 아래로 이동하는 값(양수)
+                 음수일 경우 기준점에서 위로 이동한다.
+        3. bottom : 브라우저 또는 부모박스를 기준으로 아래에서 위로 이동하는 값(양수)
+                    음수일 경우 기준점에서 아래로 이동한다.
+
+    -->
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+  </body>
+</html>
