@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-sizing</title>
+    <link rel="stylesheet" href="./css/bs.css">
+</head>
+<body>
+    <!-- 
+        컨텐츠 영역에 border까지 포함시키는 box-sizing 속성 ★★★
+        : css box model을 계산할 때 보통 width + (padding*2) + (border*2) + (margin*2)
+        이런 공식으로 계산을 하지만, box-sizing속성을 이용하면
+        padding 영역과 border 영역을 컨텐츠 영역(width/height) 안에 포함시켜준다.
+
+        <속성값>
+        - box-sizing : contnet-box;
+        : 기본값으로 Padding 과 Border를 컨텐츠 영역에 포함시키지 않는다. 
+
+        - box-sizing : border-box; ★★★
+        : 컨텐츠 영역안에 Padding 과 Border를 포함시킨다.
+     -->
+
+     <div class="box1">box1</div>
+     <div class="box2">box2</div>
+
+     <div class="con">
+        <img src="./img/icon_dap.svg" alt="dap" />
+        <div class="title">
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </div>
+    </div>
+</body>
+</html>

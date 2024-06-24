@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+div{
+    width: 300px;
+    height: 300px;
+    background-color: cornflowerblue;
+    text-align: center;
+    line-height: 300px;
+    font-size: 24px;
+    margin-bottom: 50px;
+    padding: 20px;
+    border: 10px solid #000;
+}
+
+.box1{
+    box-sizing: content-box;
+}
+
+.box2{
+    line-height: 240px;
+    box-sizing: border-box;
+}
+
+.con{
+    width: 400px;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    border-radius: 20px;
+    border: 1px solid #000;
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+img{
+    width: 100px;
+    /* block속성으로 바꿈 */
+    display: block;
+    /* 자식박스를 부모영역의 가로 가운데로 보냄. */
+    margin: 0px auto;
+}
+
+.title{
+    /* 투명 */
+    background-color: transparent;
+    border: none;
+    line-height: 1.6;
+    /* 부모박스를 기준으로 100%를 채움 */
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
