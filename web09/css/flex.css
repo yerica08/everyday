@@ -1,0 +1,62 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+/* 부모박스 */
+.con {
+  width: 1000px;
+  height: 700px;
+  margin: 0 auto;
+  background-color: lemonchiffon;
+  /* 부모박스에 적용!!! */
+  display: flex;
+  /* 하위 정렬속성 - 세로정렬 */
+  align-items: flex-start;
+  align-items: flex-end;
+  align-items: center;
+  align-items: baseline;
+  align-items: stretch;
+  /* 하위 정렬속성 - 나열방향 */
+  flex-direction: row;
+  flex-direction: row-reverse;
+  flex-direction: column;
+}
+
+.con2 {
+  width: 700px;
+  height: 400px;
+  margin: 100px auto;
+  background-color: rgb(205, 226, 255);
+  /* 부모박스에 적용!!! */
+  display: flex;
+  /* 하위 정렬속성 - 감싸기속성 */
+  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
+}
+
+/* 자식박스들 공통속성 */
+div {
+  width: 100px;
+  /* stretch를 적용하려면 height속성이 없어야함. */
+  height: 100px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 100px;
+}
+.item1 {
+  background-color: salmon;
+}
+.item2 {
+  background-color: sandybrown;
+}
+.item3 {
+  background-color: seagreen;
+}
+.item4 {
+  background-color: skyblue;
+}
+.item5 {
+  background-color: slateblue;
+}
