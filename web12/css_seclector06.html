@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조선택자</title>
+    <!-- css -->
+     <style>
+        /* ul 안에 있는 li 중에 첫째를 선택한다. */
+        ul li:first-child{
+            background-color: pink;
+        }
+        /* ul 안에 있는 li 중 막내를 선택한다. */
+        ul li:last-child{
+            background-color: skyblue;
+        }
+        /* ul 안에 있는 li 중 셋째를 선택한다. */
+        ul li:nth-child(3){
+            background-color: yellowgreen;
+        }
+        /* ul 안에 있는 li 중 짝수를 선택한다. */
+        ul li:nth-child(2n){
+            color: blueviolet;
+            font-weight: bold;
+        }
+
+     </style>
+</head>
+<body>
+    <!-- 
+        구조선택자
+        : 부모 태그 안에 동일한 태그의 자식들로 구성되어 있을 때, 특정 자식요소를 선택하는 선택자.
+
+        <기본형>
+        1. 선택자:first-child{속성명: 속성값;}
+        - 부모태그 안에 자식들 중 첫번째에 위치한 태그를 선택한다. 
+
+        2. 선택자:last-child{속성명: 속성값;}
+        - 부모태그 안에 자식들 중 마지막에 위치한 태그를 선택한다.
+
+        3. 선택자:nth-child(숫자 혹은 숫자n){속성명: 속성값;}
+        - 부모태그 안에 자식들 중 해당 숫자 번째에 위치한 태그를 선택한다.
+        *n은 수열로 숫자의 배수를 선택한다는 뜻이다. ex. 2n=2의배수
+
+        4. 선택자:nth-Last-child(숫자 혹은 숫자n){속성명: 속성값;}
+        - 부모태그 안에 자식들 중 뒤에서(=막내)부터 해당 숫자 번째에 위치한 태그를 선택한다.
+
+        리뉴얼 할때 메뉴가 늘어나거나 줄어드는 경우가 생길 수 있는데 그럴 때 사용한다.
+    -->
+
+    <ul>
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+</body>
+</html>

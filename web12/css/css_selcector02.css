@@ -1,0 +1,37 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+
+/* div > h2 {
+    color: blue;
+} */
+
+/* span을 자손과 후손으로 각각 선택
+자손을 글자색이 red
+후손은 글자색이 blue */
+
+div span{
+    color: blue;
+}
+
+div > span{
+    color: red;
+}
+
+/* 동위선택자 */
+/* +는 형태그 바로 뒤에 있는 동생태그 1개를 선택함 */
+h1 ~ h2{
+    background-color: #99af65;
+}
+/* ~는 형태그 뒤에 있는 모든 동생태그를 선택함  */
+h1 + h2{
+    background-color: #af6565;
+}
+
+/* 속성선택자 */
+
+a[target]{
+    color: red;
+}
+/* a[target='_blank']{
+    color: green;
+} */

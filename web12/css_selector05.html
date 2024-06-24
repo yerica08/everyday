@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응선택자</title>
+    <!-- css -->
+     <style>
+        *{margin: 0; padding: 0;}
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        
+        /* div에 마우스를 올리면 해당 속성을 적용 */
+        div:hover{
+            background-color: green;
+            width: 300px;
+            height: 300px;
+            border-radius: 40px;
+        }
+        
+        /* div를 클릭하는 순간 해당 속성을 적용 */
+        div:active{
+            background-color: pink;
+            width: 200px;
+            height: 200px;
+        }
+        h2:hover{
+            color: deeppink;
+            font-style: italic;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        a:active{
+            text-decoration: underline;
+        }
+     </style>
+</head>
+<body>
+    <!-- 
+        반응선택자
+        : 반응선택자는 사용자의 행위에 따라 반응하는 선택자를 말한다.
+
+        <기본형>
+        1. 선택자:hover{속성명: 속성값;} ★★★★
+        - 사용자가 해당 태그 위에 마우스를 올리면 반응(특정 동작을 수행)한다.
+        2. 선택자:active{속성명: 속성값;}
+        - 사용자가 해당 태그를 클릭하면 반응(특정 동작을 수행)한다.
+    -->
+
+    <div></div>
+    <h2>제목2</h2>
+    <a href="#">임시경로</a>
+</body>
+</html>
