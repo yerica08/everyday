@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+div{
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    font-size: 24px;
+    background-color: rgb(206, 206, 253);
+    float: left;
+}
+.test{
+    width: 1200px;
+    height: 1200px;
+    background-color: bisque;
+}
+.test1{
+    clear: both;
+}
+.test2{
+    clear: none;
+}
