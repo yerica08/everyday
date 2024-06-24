@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-content</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/flex03.css">
+</head>
+<body>
+    <!-- 
+        align-content 컨텐츠 정렬 속성
+        : flex된 컨테이너 안에 자식들이 매우 많을 경우 여러 줄이 형성된다.
+        이 때, 한 줄을 하나의 content로 본다. 그래서 속성이 이름이 align-content이다.
+        이 속성은 컨텐츠들을 각각 세로로 정렬하고, 요소 사이에(between), 주위에(around)
+        동일한 간격을 주어서 배치할 수 있다.
+
+        align-content : flex-start;
+        : 여러 줄들을 컨테이너의 top 위치에 배치한다.
+        align-content : flex-end;
+        : 여러 줄들을 컨테이너의 bottom 위치에 배치한다.
+        align-content : center;
+        : 여러 줄들을 컨테이너의 middle 위치에 배치한다.
+        align-content : space-betweem;
+        : 여러 줄들 사이에 동일한 간격을 준다.
+        align-content : space-around;
+        : 여러 줄들 주위에 동일한 간격을 준다.
+        align-content : spcae-evenly;
+        : 여러 줄들에 모두 동일한 간격을 준다.
+        align-content : stretch;
+        : 여러 줄들을 컨테이너에 맞춰 늘린다.
+     -->
+</body>
+<div class="container">
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <div class="box4">4</div>
+    <div class="box5">5</div>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <div class="box4">4</div>
+    <div class="box5">5</div>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <div class="box4">4</div>
+    <div class="box5">5</div>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <div class="box4">4</div>
+    <div class="box5">5</div>
+</div>
+</html>

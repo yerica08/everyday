@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자식박스에 주는 속성들</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/flex04.css">
+</head>
+<body>
+    <!-- 
+        아래 속성들은 반드시 자식박스에 적용하는 속성들이다.★★★
+        이 속성들도 부모박스에 flex가 적용되어 있어야만 사용할 수 있다.
+
+        order 순서 변경 속성 
+        : order를 통해 flex 안쪽의 자식 요소의 순서를 바꿀 수 있다.
+        자식박스에 적용. 기본값은 0이며, 양수나 음수로 바꿀 수 있다.
+        적은 수 일수록 나열 순서가 앞으로 온다.
+
+        ---------------------------------------------------------
+
+        flex가 적용되면 무조건 가로로 정렬이 되기때문에, 스스로 가로로 정렬되는 속성은 없다.
+
+        align-self 개별 요소 세로 정렬 속성
+        : 자식 박스를 개별적으로 세로로 정렬할 때 사용하는 속성.
+        align-items에 적용하는 속성값들을 모두 똑같이 사용한다.
+        값을 지정한 해당 태그에만 적용된다.
+
+        align-self: flex-start;
+        - 해당 요소를 컨테이너의 top 위치로 정렬한다.(기본값)
+        align-self: flex-end;
+        - 해당 요소를 컨테이너의 bottom 위치로 정렬한다.
+        align-self: center;
+        - 해당 요소를 컨테이너의 middle 위치로 정렬한다.
+        align-self: baseline;
+        - 해당 요소를 컨테이너의 시작 위치로 정렬한다.(=기본값과 결과값이 동일하다.)
+        align-self: stretch;
+        - 해당 요소만 컨테이너에 맞게 늘린다.
+
+        ---------------------------------------------------------
+
+        반응형을 만들 때 많이 사용되는 상대 단위
+        1. % : 부모박스 영역에서 주어진 %(퍼센트)만큼의 영역을 차지함.
+        2. vw, vh : viewport width, viewport height의 약자로
+                    보이는 화면을 기준으로 백분율(%)하여 적용한다.
+        3. vmax, vmin : viewport의 최대, 최소 넓이를 말한다.
+                        활용도가 제일 낮다. vw, vh를 합친 단위이다.
+                        vmax는 vw와 vh중 큰 값을 기준으로 하고,
+                        vmin은 vw와 vh중 더 작은 단위를 기준으로 한다.
+     -->
+
+     <div class="container">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+     </div>
+</body>
+</html>

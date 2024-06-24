@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 500px;
+    height: 700px;
+    margin: 0 auto;
+    background-color: rgb(95, 158, 160, 0.5);
+    display: flex;
+}
+
+div{
+    width: 150px;
+    /* height: 150px; */
+    line-height: 150px;
+    text-align: center;
+}
+
+.box1{
+    background-color: rgb(138, 200, 255);
+    align-self: flex-end;
+
+}
+.box2{
+    background-color: rgb(255, 253, 128);
+    align-self: start;
+}
+.box3{
+    background-color: rgb(255, 133, 133);
+    align-self: center;
+    align-self: stretch;
+}
