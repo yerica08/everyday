@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>표의 구조</title>
+    <!-- css -->
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        padding: 5px 10px;
+      }
+      table {
+        /* collapse는 합치기 separate는 기본형. 분리하기. */
+        border-collapse: separate;
+        border-collapse: collapse;
+      }
+      .col01 {
+        background-color: #eee;
+        border: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        표의 구조를 나타내는 태그
+        : 표의 구조를 <thead>, <tbody>, <tfoot> 으로 나눌 수 있다.
+        <thead>는 표의 최상단에 위치하고 보통 제목영역을 나타낸다.
+        <tbody>는 표 제목에 따른 내용들을 나타내는 영역이다.
+        <tfoot>은 표 내용에 따른 요약내용을 나타내는 영역으로 필수는 아니다.
+        
+        [기본형]
+        <table>
+            <cpation> 표 제목 </caption>
+            <thead>
+                <tr>
+                    <th>제목</th> - 제목영역이기 때문에 th가 나오는 경우가 많다.
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>내용</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>요약</td>
+                </tr>
+            </tfoot>
+        <table>
+
+        세로 줄을 동일하게 스타일링하는 태그
+        : 한 열(세로 줄)에 있는 모든 셀에 같은 스타일을 적용하고자 할 때 <colgroup>, <col/> 태그를 사용한다.
+        둘 이상의 열을 묶어 같은 스타일을 지정하려면 span 속성을 이용해 <col span="2"/> 형식으로 설정할 수 있다.
+        그러면 묶인 두 열에 동일한 스타일링을 할 수 있다.
+        colgroup은 col들을 묶어주는 부모영역의 역할을 한다.(col의 개수는 칸의 개수와 동일해야한다.)
+    -->
+
+    <table>
+      <caption>
+        표의 구조
+      </caption>
+      <!-- 열마다 동일한 스타일링 적용하기 -->
+      <colgroup>
+        <!-- 칸의 개수와 col의 개수가 반드시 동일해야한다. -->
+        <!-- <col class="col01" width="300" />
+        <col class="col02" />
+        <col class="col03" /> -->
+        <!-- 1,2번에 동일하게 적용하고 싶을 때 -->
+        <col span="2" class="col01" width="150" />
+        <col class="col03" />
+      </colgroup>
+      <!-- 표의 제목 영역 -->
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>제목</th>
+          <th>작성일</th>
+        </tr>
+      </thead>
+      <!-- 표의 본문 영역 -->
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>이벤트 진행</td>
+          <td>2024.06.19</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>진행 과정</td>
+          <td>2024.06.19</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>결과 조사</td>
+          <td>2024.06.19</td>
+        </tr>
+      </tbody>
+      <!-- 표의 요약 영역 -->
+      <tfoot>
+        <tr>
+          <td>요약</td>
+          <td colspan="2">쏼라쏼라쏼라</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
