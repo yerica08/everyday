@@ -1,0 +1,227 @@
+@charset "utf-8";
+.rnb > i,
+header i,
+.footer_last i,
+.drop_down i {
+  display: inline-block;
+  background-image: url(../img/sprite.svg);
+  background-size: 111px 780px;
+}
+
+.icon_down {
+  margin: 5px 10px;
+  width: 8px;
+  height: 5px;
+  background-position: -55px -146px;
+}
+
+.hamburger {
+  width: 24px;
+  height: 18px;
+  background-position: -55px -5px;
+}
+
+/* gnb의 서브메뉴 아이콘 */
+.p_jpg {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -180px;
+}
+.p_word {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -205px;
+}
+.p_power {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -230px;
+}
+.p_excel {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -255px;
+}
+.pdf_html {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -230px;
+}
+.p_combine {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -5px;
+}
+.p_division {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -30px;
+}
+.p_delete {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -55px;
+}
+.p_extraction {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -80px;
+}
+.p_composition {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -105px;
+}
+.p_scan {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -680px;
+}
+.p_compression {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -130px;
+}
+.p_restore {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -155px;
+}
+.p_ocr {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -705px;
+}
+.p_pdf_a {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -505px;
+}
+.p_spin {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -380px;
+}
+.p_page_plus {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -405px;
+}
+.p_mark_plus {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -430px;
+}
+.p_edit {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -630px;
+}
+.p_lock_down {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -455px;
+}
+.p_protect {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -480px;
+}
+.p_sign {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -555px;
+}
+.p_censorship {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -755px;
+}
+.p_comparison {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -730px;
+}
+.lang {
+  width: 20px;
+  height: 20px;
+  background-position: -30px -281px;
+}
+.p_comparison {
+  width: 20px;
+  height: 20px;
+  background-position: -5px -730px;
+}
+/* dorpdown 안의 서브메뉴 아이콘 */
+.red_heart {
+  width: 20px;
+  height: 20px;
+  background-position: -30px -5px;
+}
+.box {
+  width: 20px;
+  height: 20px;
+  background-position: -30px -430px;
+}
+.idea {
+  width: 20px;
+  height: 20px;
+  background-position: -30px -480px;
+}
+.pay {
+  width: 20px;
+  height: 20px;
+  background-position: -30px -130px;
+}
+.i_lang {
+  width: 20px;
+  height: 20px;
+  background-position: -30px -155px;
+}
+.help {
+  width: 20px;
+  height: 20px;
+  background-position: -30px -180px;
+}
+.blue_heart {
+  width: 20px;
+  height: 20px;
+  background-position: -30px -30px;
+}
+
+/* 푸터 서브메뉴 아이콘 */
+.social > .twitter {
+  display: inline-block;
+  background-image: url(../img/sns/twitter.svg);
+  background-size: 24px 24px;
+  width: 24px;
+  height: 24px;
+}
+.social > .facebook {
+  display: inline-block;
+  background-image: url(../img/sns/facebook.svg);
+  background-size: 24px 24px;
+  width: 24px;
+  height: 24px;
+}
+.social > .linkedin {
+  display: inline-block;
+  background-image: url(../img/sns/linkedin.svg);
+  background-size: 24px 24px;
+  width: 24px;
+  height: 24px;
+}
+.social > .instagram {
+  display: inline-block;
+  background-image: url(../img/sns/instagram.svg);
+  background-size: 24px 24px;
+  width: 24px;
+  height: 24px;
+}
+.social > .tiktok {
+  display: inline-block;
+  background-image: url(../img/sns/tiktok.svg);
+  background-size: 24px 24px;
+  width: 24px;
+  height: 24px;
+}

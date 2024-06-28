@@ -1,0 +1,340 @@
+@charset "utf-8";
+/* import는 html의 link 속성과 같다. */
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #47474f;
+}
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+header {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  padding: 0 24px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  column-gap: 24px;
+}
+
+/* 로고 */
+h1 {
+  width: fit-content;
+  height: fit-content;
+  padding: 15px 0;
+}
+h1 img {
+  height: 30px;
+}
+
+/* 1차메뉴 */
+#gnb {
+  width: fit-content;
+  height: 100%;
+}
+#gnb > ul {
+  width: fit-content;
+  display: flex;
+  column-gap: 20px;
+  line-height: 60px;
+}
+#gnb > ul > li .sm3 {
+  display: inline-block;
+  font-size: 9px;
+  position: relative;
+  top: -2px;
+  margin-bottom: 5px;
+}
+#gnb > ul > li {
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
+}
+#gnb > ul > li > a {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+}
+#gnb > ul > li:hover > a {
+  color: red;
+}
+/* 2차메뉴 */
+#gnb > ul > li:nth-child(4) > div,
+#gnb > ul > li:last-child > div {
+  background-color: #fff;
+  width: 160%;
+  height: fit-content;
+  overflow: hidden;
+  position: absolute;
+  left: -50px;
+  top: 70px;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  transition: 0.3s;
+  overflow: hidden;
+  height: 0;
+}
+.submenu {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 30px;
+  text-align: left;
+  line-height: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.submenu > span {
+  color: #707078;
+}
+.submenu > li {
+  padding-left: 30px;
+  position: relative;
+  border-radius: 8px;
+}
+.submenu > li:hover {
+  background-color: #eee;
+}
+/* a태그 앞에 아이콘 영역 공통 설정 */
+.submenu > li > a::before {
+  content: "icons";
+  font-size: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 5px;
+  top: 15px;
+  background: url(../img/sprite.svg) no-repeat;
+  background-position: -5px;
+}
+.submenu > li > a.jpg::before {
+  background-position-y: -180px;
+}
+.submenu > li > a.word::before {
+  background-position-y: -205px;
+}
+.submenu > li > a.powerpoint::before {
+  background-position-y: -230px;
+}
+.submenu > li > a.excel::before {
+  background-position-y: -255px;
+}
+.submenu > li > a.pdf::before {
+  background-position-y: -530px;
+}
+.submenu > li > a.merge::before {
+  background-position-y: -5px;
+}
+.submenu > li > a.split::before {
+  background-position-y: -30px;
+}
+.submenu > li > a.remove::before {
+  background-position-y: -55px;
+}
+.submenu > li > a.extract::before {
+  background-position-y: -80px;
+}
+.submenu > li > a.organize::before {
+  background-position-y: -105px;
+}
+.submenu > li > a.scan::before {
+  background-position-y: -680px;
+}
+.submenu > li:hover a {
+  color: red;
+}
+.submenu > li:hover {
+  cursor: pointer;
+}
+#gnb > ul > li:nth-child(4):hover > div {
+  height: 320px;
+}
+#gnb > ul > li:last-child:hover > div {
+  height: 370px;
+}
+/* 오른쪽 아이콘 버튼들 */
+.action {
+  /* px 값을 주면 반응형을 만들 때 작동이 안됨. */
+  width: fit-content;
+  height: 100%;
+  /* margin-left를 auto로 주면 여백이 자동으로 최대 값으로 잡힌다. */
+  margin-left: auto;
+  gap: 5px;
+  align-items: center;
+  display: flex;
+}
+.action > a {
+  display: block;
+  width: 60px;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+.action > a::before {
+  content: "";
+  display: block;
+  background-image: url(../img/sprite.svg);
+  background-repeat: no-repeat;
+}
+.action > a.icon_desk {
+  padding: 16px 14px;
+}
+.action > a.icon_desk::before {
+  width: 32px;
+  height: 28px;
+  background-position: -55px -30px;
+}
+
+/* border-radius는 inline 속성한테 줄 수 없다. block 속성만 가능. */
+.action > a.icon_desk::after {
+  content: "ilovePDF Desktop, work offline";
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  width: 230px;
+  line-height: 32px;
+  background-color: #47474f;
+  text-align: center;
+  font-weight: 700;
+  position: absolute;
+  top: 70px;
+  left: -70px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.action > a.icon_desk:hover::after {
+  opacity: 1;
+}
+.action > a.login {
+  text-align: center;
+  line-height: 60px;
+  color: red;
+  font-weight: 500;
+}
+.action > a.login:hover {
+  color: #47474f;
+}
+.action > a.sign_up {
+  box-sizing: content-box;
+  text-align: center;
+  height: 35px;
+  padding: 0 12px;
+  line-height: 35px;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: rgb(197, 15, 15);
+  color: #fff;
+  border-radius: 10px;
+}
+.action > a.sign_up:hover {
+  background-color: #47474f;
+}
+.action > a.menu {
+  padding: 21px 18px;
+}
+
+.action > a.menu::before {
+  width: 24px;
+  height: 18px;
+  background-position: -55px -5px;
+}
+/* 컨텐츠 영역 */
+main {
+  width: 100%;
+  height: auto;
+  background: #f5f5fa url(../img/background.svg) no-repeat fixed;
+}
+section {
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+}
+.tools {
+  margin-top: 60px;
+  text-align: center;
+  padding: 50px 0;
+}
+.top_title {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.top_title h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.top_title p {
+  font-size: 22px;
+}
+.tools_wrap {
+  padding: 0 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+.item_con {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2px;
+}
+.item_con .item {
+  /* flex-basis: calc(16.666%-4px); */
+  flex: 1 0 16%;
+  word-wrap: break-word;
+  background-color: #fff;
+  border: 1px solid #f5f5fa;
+  text-align: left;
+  border-radius: 4px;
+  box-sizing: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 50px 30px;
+  box-sizing: border-box;
+}
+.item a:hover {
+  background-color: #eee;
+}
+.item h3 {
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+}
+.item h3::before {
+  content: "icons";
+  font-size: 0;
+  display: block;
+  background: url(../img/sprite.svg) no-repeat;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 30px;
+  background-size: 545%;
+  background-position: -11px -11px;
+}
+.item p {
+  font-size: 13px;
+  line-height: 18px;
+  color: #707078;
+  margin-top: 10px;
+}
