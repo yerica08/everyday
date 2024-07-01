@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변환속성</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box1 {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        background-color: pink;
+        cursor: pointer;
+      }
+      .box1:hover {
+        width: 400px;
+        height: 400px;
+        background-color: skyblue;
+        transition-duration: 1s;
+        transition-delay: 2s;
+      }
+      .box1:active {
+        background-color: #e69ef0;
+        transition-duration: 1s;
+        border-radius: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        transition
+        : 움직임을 만들어내는 속성이다.
+        해당 요소의 움직임을 부드럽게 처리하는 역할을 한다.
+        움직임을 구현하는 방식은 애니메이션 속성과 변환 속성으로 나눠지는데,
+        변환 속성을 사용하면 더 간단하게 모션 효과를 구현할 수 있다.
+        transition은 animation과는 달리 적용 후 바로 변화가 보이지 않는다.
+        사용자의 행위가 반드시 필요하고 행위에 따라 ~초 동안 변화하는 속성이다.
+
+        ----------------------------------------------------------------------
+        변환 속성으로 변화시킬 수 있는 다양한 속성들
+        1. 위치속성 : position - top, left, bottom, right
+        2. 크기속성 : width, height
+        3. 박스속성 : padding, margin
+        4. 테두리속성 : border-width, border-color, border-radius
+        5. 색상속성 : background-color, color
+        6. 투명도 : opacity, alpha
+        7. 변형속성 : transform
+        
+        ---- [종류]
+        1. transition-duration 
+        : 한 사이클을 완료하는 데 걸리는 시간을 지정하는 속성이다.
+        초(s), 밀리 초 (ms)로 지정 할 수 있다. 값은 양수 또는 0이어야하며 단위는 필수입니다. 
+        기본값인 0의 값은 애니메이션이 작동하지 않아야 함을 나타냅니다.
+
+        2. transition-delay
+        : transition이 이벤트 발생 후 시작할 시점을 지정한다.
+        * 이벤트 : hover나 action 과 같은 사용자에 의해 발생하는 모든 행위)
+
+        3. transition-property
+        : 어떤 속성을 변화시킬지 지정한다. 속성값으로는 css 속성의 이름을 사용한다.
+          transition-property를 지정하면 다른 속성은 transition의 영향을 받지않고 지정한 속성만 변화시킬 수 있다.
+
+        4. transition-timing-function
+        : 수치 변형 함수. 지정된 속도로 모션효과를 줄 수 있다.
+            [속성값]
+            - linear : 시작부터 끝까지 같은 속도로 트렌지션을 진행함
+            - ease : 천천히 시작해서 점점 빨라지며 마지막은 천천히 끝난다. 기본값.
+            - ease-in : 속도의 시작을 느리게 한다.
+            - ease-out : 마지막을 느리게 끝낸다.
+            - ease-in-out : 느리게 시작하여 느리게 끝낸다.
+    -->
+    <div class="box1"></div>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변환속성 실습</title>
+    <style>
+      /* gap 속성 공부나 좀 해봐야겠다.. */
+      #graph {
+        margin: 20px;
+        width: 700px;
+        height: fit-content;
+        border-left: 3px solid black;
+        border-bottom: 3px solid black;
+      }
+      .box {
+        width: 30px;
+        height: 50px;
+        background-color: pink;
+        margin: 10px;
+        position: relative;
+        /* 1s = 1000ms */
+        transition-duration: 3s;
+      }
+      /* #graph:hover .box {
+        width: 500px;
+        transition-duration: 3s;
+      } */
+      .box:nth-child(1) {
+        /* transition-delay: 0s; */
+        /* transition-timing-function: linear; */
+      }
+      .box:nth-child(2) {
+        /* transition-delay: 0.5s; */
+        /* transition-timing-function: ease; */
+      }
+      .box:nth-child(3) {
+        /* transition-delay: 1s; */
+        /* transition-timing-function: ease-in; */
+      }
+      .box:nth-child(4) {
+        /* transition-delay: 1.5s; */
+        /* transition-timing-function: ease-out; */
+      }
+      .box:nth-child(5) {
+        /* transition-delay: 2s; */
+        /* transition-timing-function: ease-in-out; */
+      }
+      #graph:hover .box:nth-child(1) {
+        background-color: rgb(245, 93, 118);
+        width: 50%;
+      }
+      #graph:hover .box:nth-child(2) {
+        background-color: rgb(254, 255, 192);
+        width: 20%;
+      }
+      #graph:hover .box:nth-child(3) {
+        background-color: rgb(161, 243, 154);
+        width: 70%;
+      }
+      #graph:hover .box:nth-child(4) {
+        background-color: rgb(226, 153, 245);
+        width: 100%;
+      }
+      #graph:hover .box:nth-child(5) {
+        background-color: rgb(190, 190, 190);
+        width: 50%;
+      }
+      /* 배경색상은 2초동안 넓이는 5초동안 변화해라. */
+      .box {
+        /* 콤마로 속성명 구분 */
+        transition-property: background-color, width;
+        transition-duration: 2s, 5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="graph">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

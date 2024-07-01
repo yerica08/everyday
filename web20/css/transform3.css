@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+section {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: 150px;
+  /* background-color: bisque; */
+  animation: spin 3s linear 0s infinite;
+  /* 평면에서 3d로 만들어주는 속성 */
+  transform-style: preserve-3d;
+}
+div {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.3;
+}
+/* 옆면 */
+section div:nth-child(1) {
+  transform: rotateY(0deg) translate3d(0px, 0px, 150px);
+  background-color: pink;
+}
+section div:nth-child(2) {
+  transform: rotateY(90deg) translate3d(0px, 0px, 150px);
+  background-color: skyblue;
+}
+section div:nth-child(3) {
+  transform: rotateY(180deg) translate3d(0px, 0px, 150px);
+  background-color: rgb(135, 235, 135);
+}
+section div:nth-child(4) {
+  transform: rotateY(270deg) translate3d(0px, 0px, 150px);
+  background-color: rgb(228, 235, 135);
+}
+/* 윗면 아랫면 */
+section div:nth-child(5) {
+  transform: rotateX(90deg) translate3d(0px, 0px, 150px);
+  background-color: rgb(150, 135, 235);
+}
+section div:nth-child(6) {
+  transform: rotateX(270deg) translate3d(0px, 0px, 150px);
+  background-color: rgb(235, 188, 135);
+}
+
+@keyframes spin {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotatez(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg) rotatez(360deg);
+  }
+}
