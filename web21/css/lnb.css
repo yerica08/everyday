@@ -1,0 +1,63 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+#lnb {
+  width: 200px;
+  /* 2차 메뉴가 유동적으로 보이기 때문에 높이를 overflow로 적용 */
+  overflow: hidden;
+}
+#lnb > ul {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#lnb > ul > li {
+  font-size: 16px;
+  background-color: rgb(51, 123, 141);
+  text-align: center;
+  font-weight: 400;
+  border-bottom: 1px solid #ffffff;
+  line-height: 40px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+#lnb > ul > li > a {
+  text-transform: uppercase;
+}
+#lnb > ul > li > a {
+  color: #ffffff;
+}
+/* 2차 메뉴 */
+.sub_menu {
+  width: 100%;
+  overflow: hidden;
+  height: 0;
+  transition: 0.3s;
+}
+.sub_menu li {
+  font-size: 14px;
+  background-color: #fdfff8;
+  border-bottom: 1px solid #c4ccaf;
+}
+.sub_menu li:last-child {
+  border-bottom: 0;
+}
+.sub_menu > li > a {
+  display: block;
+  color: #3b3b3b;
+}
+
+#lnb > ul > li:hover .sub_menu {
+  height: 160px;
+}
+.sub_menu li:hover > a {
+  color: rgb(235, 72, 23);
+}
+.sub_menu li:hover {
+  /* background-color: #f1f1f1; */
+  box-shadow: 0 0 5px rgb(228, 228, 228, 0.5) inset;
+}
