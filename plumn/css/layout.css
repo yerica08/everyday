@@ -1,0 +1,593 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  color: #3f3d56;
+  text-align: center;
+}
+section {
+  width: 100%;
+  overflow: hidden;
+}
+.wrapper {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.header_wrap {
+  width: 100%;
+  height: 100px;
+  background-color: #19163c;
+  position: fixed;
+  z-index: 50;
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0 5px 20px rgb(49, 44, 96, 0.5);
+}
+/* 헤더 */
+header {
+  width: 1600px;
+  height: 100px;
+  position: relative;
+  padding: 26px 0;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translatex(-50%);
+}
+header h1 {
+  float: left;
+  padding: 10px 0;
+}
+.icon_wrap {
+  width: fit-content;
+  height: 48px;
+  float: right;
+}
+.icon_wrap > a {
+  width: 48px;
+  height: 48px;
+  float: left;
+  padding-left: 15px;
+}
+.icon_wrap > a:first-child div {
+  width: 48px;
+  height: 48px;
+  background-image: url(../img/login.png);
+  background-size: 24px 24px;
+  background-position: 12px 12px;
+  background-repeat: no-repeat;
+}
+.icon_wrap > a:last-child div {
+  width: 48px;
+  height: 48px;
+  background-image: url(../img/menu.png);
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: 12px 12px;
+}
+/* 헤더 - gnb */
+#gnb {
+  width: 630px;
+  overflow: hidden;
+  color: #fff;
+  float: right;
+  padding: 0 50px;
+}
+#gnb > ul {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#gnb > ul > li {
+  width: 126px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 48px;
+  box-sizing: border-box;
+  cursor: pointer;
+  float: left;
+}
+#gnb > ul > li > a {
+  color: #ffffff;
+}
+/* 2차 메뉴 */
+.sub_menu {
+  width: 100%;
+  overflow: hidden;
+  height: 0;
+  transition: 0.3s;
+}
+.sub_menu li {
+  font-size: 14px;
+}
+#gnb > ul > li:hover .sub_menu {
+  height: 160px;
+}
+.sub_menu li:hover > a {
+  color: rgb(235, 72, 23);
+}
+/* 메인비주얼 */
+.main_visual_wrap {
+  width: 100%;
+  height: 980px;
+  position: relative;
+}
+.main_visual {
+  width: 100%;
+  height: 100%;
+  background-color: #19163c;
+}
+/* 메인비주얼-배경이미지 */
+.main_visual::before {
+  display: block;
+  content: "";
+  width: 888px;
+  height: 786px;
+  background-image: url(../img/bg_img1.png);
+  background-repeat: no-repeat;
+  background-size: 888px 786px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: updown 1s linear alternate infinite;
+  z-index: 1;
+}
+.main_visual::after {
+  display: block;
+  content: "";
+  width: 888px;
+  height: 786px;
+  background-image: url(../img/bg_img2.png);
+  background-repeat: no-repeat;
+  background-size: 888px 786px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: updown2 1s linear alternate infinite;
+  z-index: 1;
+}
+@keyframes updown {
+  from {
+    bottom: -20px;
+    left: -20px;
+  }
+  to {
+    bottom: 0;
+    left: 0;
+  }
+}
+@keyframes updown2 {
+  from {
+    top: -20px;
+    right: -20px;
+  }
+  to {
+    top: 0;
+    right: 0;
+  }
+}
+.main_text {
+  width: fit-content;
+  height: fit-content;
+  z-index: 300;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+}
+.main_text h2 {
+  width: fit-content;
+  font-size: 47px;
+  font-weight: bold;
+  color: #f50057;
+  margin: 0 auto;
+  padding-top: 300px;
+  text-transform: uppercase;
+
+  z-index: 300;
+}
+.main_text h2::after {
+  display: block;
+  content: "";
+  width: 540px;
+  height: 1px;
+  background-color: #fff;
+  margin: 10px;
+}
+.main_text p {
+  margin-top: 30px;
+  color: #fff;
+  line-height: 42px;
+}
+
+.next_page {
+  width: fit-content;
+  height: 30px;
+  display: flex;
+  margin: 50px auto;
+  margin-top: 400px;
+  z-index: 2;
+}
+.circle {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 0 5px;
+}
+.next_page .circle:first-child {
+  width: 50px;
+  background-color: #f50057;
+}
+/* 2번째 섹션 */
+.con_explan_wrap {
+  /* background-color: #fff; */
+  padding: 100px 0;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+  /* 두개의 이미지를 같이 넣을때 속성을 각각 넣어줘야하고 쉼표로 구분해주어야한다. */
+}
+.con_explan_bg1 {
+  z-index: -5;
+  width: 100%;
+  height: 734px;
+  background: url(../img/bg_02.png) no-repeat;
+  background-position-y: bottom;
+  position: absolute;
+  animation: bg_moving 1s ease-in-out alternate infinite;
+}
+.con_explan_bg2 {
+  z-index: -6;
+  width: 100%;
+  height: 734px;
+  background: url(../img/bg_01.png) no-repeat;
+  background-position-y: bottom;
+  position: absolute;
+  animation: bg_moving 1s ease-in-out alternate-reverse infinite;
+}
+@keyframes bg_moving {
+  from {
+    transform: scale(1.3, 1) translateX(50px);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(1.2, 1) translateX(0px);
+    opacity: 0.9;
+  }
+}
+.con_explan {
+  width: 1600px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0;
+}
+.con_text {
+  width: 500px;
+  height: 534px;
+  position: relative;
+  line-height: 60px;
+  position: relative;
+  z-index: 3;
+  margin: 0 150px;
+}
+.con_text h3 {
+  font-size: 24px;
+  font-weight: 600;
+  font-style: italic;
+  margin: 20px 0;
+}
+.con_text h3::after {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #f50057;
+  position: relative;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.con_text p {
+  font-size: 47px;
+  font-weight: 400;
+  margin: 20px 0;
+}
+.con_text a {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  background-color: #3f3d56;
+  color: #fff;
+  padding: 25px 100px;
+  border-radius: 100px;
+  margin: 0 auto;
+  margin-top: 100px;
+  cursor: pointer;
+}
+.con_text a:hover {
+  background-color: #f50057;
+}
+.img_wrap {
+  position: relative;
+  z-index: 3;
+}
+/* 3번째 섹션 */
+.sec03_wrap {
+  width: 100%;
+  overflow: hidden;
+}
+.sec03 {
+  width: 1600px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 150px 0;
+}
+.sec03_title {
+  width: 100%;
+  height: fit-content;
+}
+.sec03_title h3 {
+  font-size: 47px;
+  font-weight: bold;
+}
+.sec03_title p {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 80px;
+}
+.sec03_menu {
+  width: 100%;
+  height: fit-content;
+}
+.sec03_menu ul {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.sec03_menu ul li {
+  display: block;
+  width: 380px;
+  height: 500px;
+  position: relative;
+}
+.sec03_menu ul li div {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+.sec03_menu ul li div img:first-child {
+  position: absolute;
+  bottom: 0;
+}
+.sec03_menu ul li div img:last-child {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+.sec03_menu ul li:hover div img:last-child {
+  animation: top_bottom_img 0.5s ease-in-out;
+  display: block;
+}
+@keyframes top_bottom_img {
+  from {
+    transform: translate(-50%, -50px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0px);
+    opacity: 1;
+  }
+}
+.sec03_menu ul li a {
+  display: block;
+  width: 100%;
+  height: 200px;
+  box-sizing: border-box;
+  padding: 30px;
+}
+.sec03_menu h4 {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+.sec03_menu p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+}
+/* 섹션4 */
+.sec04_wrap {
+  width: 100%;
+  height: fit-content;
+  background-color: #f7f9ff;
+}
+.sec04 {
+  width: 1600px;
+  height: fit-content;
+  padding: 100px 0;
+  margin: 0 auto;
+}
+.sec04 h3 {
+  font-size: 47px;
+  font-weight: bold;
+  line-height: 130px;
+}
+.sec04 p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 28px;
+}
+.buttons {
+  margin-top: 40px;
+}
+.buttons a {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 400;
+  /* 왜 지금 text-transform: capitalize; 을 쓰면 두번째 단어만 대문자가 되는가..?*/
+  /* text-transform: capitalize; */
+  line-height: 50px;
+  border-radius: 25px;
+  width: 350px;
+  height: 50px;
+  color: #fff;
+  margin: 30px;
+}
+.buttons a:first-child {
+  background-color: #f50057;
+}
+.buttons a:first-child:hover {
+  background-color: #f478a3;
+}
+.buttons a:first-child::before {
+  display: inline-block;
+  content: "icon";
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  background: url(../img/apple.png) no-repeat center center;
+  padding: 0 10px;
+}
+.buttons a:last-child::before {
+  display: inline-block;
+  content: "icon";
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  background: url(../img/android.png) no-repeat center center;
+  padding: 0 10px;
+}
+.buttons a:last-child {
+  background-color: #19163c;
+}
+.buttons a:last-child:hover {
+  background-color: #625abd;
+}
+/* 마지막섹션 */
+.sec05_wrap {
+  width: 100%;
+  height: fit-content;
+  background-color: #ffffff;
+}
+.sec05 {
+  width: 1600px;
+  height: fit-content;
+  padding: 150px 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.sec05_text {
+  padding: 130px 0;
+}
+.sec05 h3 {
+  font-size: 47px;
+  font-weight: bold;
+  line-height: 130px;
+  text-align: left;
+}
+.sec05 p {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: left;
+  color: #888;
+}
+.form_wrap {
+  width: 860px;
+  height: fit-content;
+  border-top: 3px solid #c8c8c8;
+  border-bottom: 3px solid #c8c8c8;
+  padding: 10px 50px;
+  text-align: left;
+}
+.form_wrap label {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+  vertical-align: top;
+  width: 150px;
+}
+.form_wrap > form > div {
+  margin: 50px 0;
+}
+.form_wrap form {
+  position: relative;
+}
+#uesr_name,
+#uesr_email {
+  vertical-align: top;
+  width: 700px;
+  height: 50px;
+  font-size: 28px;
+  border: 0;
+  outline: none;
+  background-color: rgb(247, 247, 247);
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+#questions {
+  width: 700px;
+  height: 250px;
+  font-size: 24px;
+  border: 0;
+  outline: none;
+  background-color: rgb(247, 247, 247);
+  vertical-align: top;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+#questions::placeholder {
+  font-size: 20px;
+  vertical-align: top;
+  text-align: left;
+  color: #bdbdbd;
+}
+.sand_button {
+  display: inline-block;
+  background-color: #19163c;
+  color: white;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  padding: 10px 50px;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  cursor: pointer;
+  border: none;
+}
+.sand_button:hover {
+  background-color: #f50057;
+}
+/* 푸터 */
+footer {
+  width: 100%;
+  height: fit-content;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #f7f9ff;
+  color: #818181;
+  padding: 20px;
+}
